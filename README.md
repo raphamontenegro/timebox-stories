@@ -28,6 +28,8 @@ As a user, if the timebox is longer than 45 minutes, I want the app to recommend
 As a user I want to be able to choose the language of the app so that I can understand better the features.
 As a user I want the app to recognize the language of my phone so that I can understand better the features.
 
+As a user I want to have stories outside of Pocket so that I can read random stuff.
+
 
 
 
