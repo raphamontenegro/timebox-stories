@@ -1,23 +1,30 @@
 
 
 # MVP
+
 As a user I want to sign up so that I open an account.
 
-As a user I want to sign up and log in with Pocket.
+
 
 As a user I want to log in so that I can access my account.
 
-As a user I want to connect with Pocket so that I can access my selected files.
+
 
 As a user I want to be able to choose the timebox of my stories so that I get the perfect reading time.
 
-As a user I want to be able to pick another story so that I can skip a story I don't like.
+
 
 As a "blind "user I want the app to read out loud the stories so that I can get to know what it is about.
 
 
 
 # BACKLOG
+
+As a user I want to connect with Pocket so that I can access my selected files.
+
+As a user I want to sign up and log in with Pocket.
+
+As a user I want to be able to pick another story so that I can skip a story I don't like.
 
 As a user I want to be able to choose the stories by tags so that I can get the theme/subject I prefer.
 
