@@ -30,6 +30,8 @@ As a user I want the app to recognize the language of my phone so that I can und
 
 As a user I want to have stories outside of Pocket so that I can read random stuff.
 
+As a user, a distant future, I want to be able to buy e-books from Amazon so that I can enhance my reading possibilities.
+
 
 
 
