@@ -1,3 +1,33 @@
+
+
+# MVP
+As a user I want to sign up so that I open an account.
+
+As a user I want to log in so that I can access my account.
+
+As a user I want to connect with Pocket so that I can access my selected files.
+
+As a user I want to be able to choose the timebox of my stories so that I get the perfect reading time.
+
+As a user I want to be able to pick another story so that I can skip a story I don't like.
+
+As a "blind "user I want the app to read out loud the stories so that I can get to know what it is about.
+
+
+# BACKLOG
+
+As a user I want to be able to choose the stories by tags so that I can get the theme/subject I prefer.
+
+As a  "color blind" user I want to be able to be able to use the app normally so that I can profit from its full potential.
+
+As a user, if the timebox is longer than 45 minutes, I want the app to recommend me a nice place to chill so that I can read more comfortably.
+
+
+
+Continues on the next episoded...
+
+
+
 # Client
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
