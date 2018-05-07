@@ -3,6 +3,8 @@
 # MVP
 As a user I want to sign up so that I open an account.
 
+As a user I want to sign up and log in with Pocket.
+
 As a user I want to log in so that I can access my account.
 
 As a user I want to connect with Pocket so that I can access my selected files.
@@ -14,6 +16,7 @@ As a user I want to be able to pick another story so that I can skip a story I d
 As a "blind "user I want the app to read out loud the stories so that I can get to know what it is about.
 
 
+
 # BACKLOG
 
 As a user I want to be able to choose the stories by tags so that I can get the theme/subject I prefer.
@@ -21,6 +24,10 @@ As a user I want to be able to choose the stories by tags so that I can get the 
 As a  "color blind" user I want to be able to be able to use the app normally so that I can profit from its full potential.
 
 As a user, if the timebox is longer than 45 minutes, I want the app to recommend me a nice place to chill so that I can read more comfortably.
+
+As a user I want to be able to choose the language of the app so that I can understand better the features.
+As a user I want the app to recognize the language of my phone so that I can understand better the features.
+
 
 
 
