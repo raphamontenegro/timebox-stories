@@ -67,17 +67,17 @@ As a user, a distant future, I want to be able to buy e-books from Amazon so tha
  ## SERVER
  
  #### MVP
-POST /auth/signup --  creates a new account
-POST /auth/Login -- connects the user to his/her account
-GET /storypicker -- returns a json with the the story list
-GET /stories/:id -- returns a json with one story
+- POST /auth/signup --  creates a new account
+- POST /auth/Login -- connects the user to his/her account
+- GET /storypicker -- returns a json with the the story list
+- GET /stories/:id -- returns a json with one story
 
 #### BACKLOG
 
-POST /stories  -- saves a story in the database
-POST /auth/pocket
-POST /auth/medium
-GET /user/:id
+- POST /stories  -- saves a story in the database
+- POST /auth/pocket
+- POST /auth/medium
+- GET /user/:id
 
 
 
