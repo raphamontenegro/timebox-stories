@@ -50,18 +50,18 @@ As a user, a distant future, I want to be able to buy e-books from Amazon so tha
 
 #### MVP
 
-/ - The homepage
-routerLink /auth/login
-routerLink /auth/signup
-routerLink /storypicker
-routerLink /storypicker/:id
+- / - The homepage
+- routerLink /auth/login
+- routerLink /auth/signup
+- routerLink /storypicker
+- routerLink /storypicker/:id
 
 #### BACKLOG
 
-routerLink /auth/pocket -- connects with Pockets API trhough Passport
-routerLink /auth/medium -- connects with Mediums API through Passport
-routerLink /stories/add-story -- creates a new story and adds it to the the story list
-routerLink /user/:id -- returns a list all the stories that the user has
+- routerLink /auth/pocket -- connects with Pockets API trhough Passport
+- routerLink /auth/medium -- connects with Mediums API through Passport
+- routerLink /stories/add-story -- creates a new story and adds it to the the story list
+- routerLink /user/:id -- returns a list all the stories that the user has
 
 
  ## SERVER
