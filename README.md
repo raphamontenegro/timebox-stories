@@ -43,8 +43,59 @@ As a user, a distant future, I want to be able to buy e-books from Amazon so tha
 
 
 
+# ROUTES
+
+
+## CLIENT 
+
+#### MVP
+
+/ - The homepage
+routerLink /auth/login
+routerLink /auth/signup
+routerLink /storypicker
+routerLink /storypicker/:id
+
+#### BACKLOG
+
+routerLink /auth/pocket -- connects with Pockets API trhough Passport
+routerLink /auth/medium -- connects with Mediums API through Passport
+routerLink /stories/add-story -- creates a new story and adds it to the the story list
+routerLink /user/:id -- returns a list all the stories that the user has
+
+
+ ## SERVER
+ 
+ #### MVP
+POST /auth/signup --  creates a new account
+POST /auth/Login -- connects the user to his/her account
+GET /storypicker -- returns a json with the the story list
+GET /stories/:id -- returns a json with one story
+
+#### BACKLOG
+
+POST /stories  -- saves a story in the database
+POST /auth/pocket
+POST /auth/medium
+GET /user/:id
+
+
+
+
+
+
 
 Continues on the next episoded...
+
+
+
+
+
+
+
+
+
+
 
 
 
