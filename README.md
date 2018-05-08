@@ -98,7 +98,26 @@ Users {
   }
 }
 
-
+stories {
+	length:  {
+		type: String,
+		required: true
+	},
+	read {
+		type: boolean
+	},
+	tags {
+		type: String
+	},
+	owner {
+		type: ObjectId,
+    required: true
+    }
+   /* source {
+        type: String,
+        required: true
+      } */  
+}
 
 
 
