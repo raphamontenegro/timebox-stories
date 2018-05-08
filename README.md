@@ -80,6 +80,23 @@ As a user, a distant future, I want to be able to buy e-books from Amazon so tha
 - GET /user/:id
 
 
+# MODELS
+
+Users {
+  username: {
+    type: string,
+    required: true
+  },
+  email: {
+    type: string,
+    required: true
+    unique: true
+  },
+  password: {
+    type: string,
+    required: true
+  }
+}
 
 
 
