@@ -99,6 +99,10 @@ User {
 }
 
 Story {
+  text: {
+    type: String,
+    required: true
+    },
 	length:  {
 		type: String,
 		required: true
