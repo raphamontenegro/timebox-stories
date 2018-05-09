@@ -81,7 +81,7 @@ As a user, a distant future, I want to be able to buy e-books from Amazon so tha
 
 
 # MODELS
-
+```
 User {
   username: {
     type: string,
@@ -97,7 +97,9 @@ User {
     required: true
   }
 }
+```
 
+```
 Story {
   text: {
     type: String,
@@ -122,7 +124,7 @@ Story {
         required: true
       } */  
 }
-
+```
 
 
 Continues on the next episode...
