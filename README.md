@@ -43,12 +43,11 @@ As a user, a distant future, I want to be able to buy e-books from Amazon so tha
 
 
 
-# ROUTES
+# CLIENT
 
+## ROUTES 
 
-## CLIENT 
-
-#### MVP
+### MVP
 
 - / - The homepage
 - routerLink /auth/login
@@ -56,7 +55,7 @@ As a user, a distant future, I want to be able to buy e-books from Amazon so tha
 - routerLink /storypicker
 - routerLink /storypicker/:id
 
-#### BACKLOG
+### BACKLOG
 
 - routerLink /auth/pocket -- connects with Pockets API trhough Passport
 - routerLink /auth/medium -- connects with Mediums API through Passport
@@ -64,24 +63,50 @@ As a user, a distant future, I want to be able to buy e-books from Amazon so tha
 - routerLink /user/:id -- returns a list all the stories that the user has
 
 
- ## SERVER
+## SERVICES
+
+### MVP
+
+- auth.login(user)
+- auth.signup(user)
+- auth.logout()
+- auth.me()
+- stories.getOne(id)
+- stories.getList()
+
+### BACKLOG
+
+- auth.startOauth(provider)
+- stories.save(story)
+
+
+# SERVER
  
- #### MVP
+## ROUTES
+ 
+### MVP
+
 - POST /auth/signup --  creates a new account
-- POST /auth/Login -- connects the user to his/her account
-- GET /storypicker -- returns a json with the the story list
+- POST /auth/login -- connects the user to his/her account
+- POST /auth/logout -- removes user from session
+- GET /auth/me -- returns current user in session (if any)
+
+- GET /stories -- returns a json with the the story list
 - GET /stories/:id -- returns a json with one story
 
-#### BACKLOG
+### BACKLOG
 
 - POST /stories  -- saves a story in the database
-- POST /auth/pocket
-- POST /auth/medium
 - GET /user/:id
 
+- todo research routes for OAuth
+  - POST /auth/pocket
+  - POST /auth/medium
 
-# MODELS
 
+## MODELS
+
+```
 User {
   username: {
     type: string,
@@ -97,7 +122,9 @@ User {
     required: true
   }
 }
+```
 
+```
 Story {
   text: {
     type: String,
@@ -122,7 +149,7 @@ Story {
         required: true
       } */  
 }
-
+```
 
 
 Continues on the next episode...
