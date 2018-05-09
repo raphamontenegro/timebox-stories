@@ -1,4 +1,4 @@
-/* ---- reset ---- */
+
 
 html {
   box-sizing: border-box;
@@ -126,7 +126,7 @@ label {
     background-color:  #03A9F4;
     border-bottom-left-radius: 100%;
     border: none;
-    color: #111;
+    color: #fff;
   }
   /* #burger:active {
     animation-name: rotate;
