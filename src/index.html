@@ -1,14 +1,26 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Client</title>
-  <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>timeBox</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <app-root></app-root>
+  <div class="nav">
+    <label for="toggle" id="burger">&#9776;</label>
+    <input type="checkbox" id="toggle">
+    <div class="menu">
+      <a href="#">Sign Up</a>
+      <a href="#">Log in</a>
+    </div>
+  </div>
+
+  <app-component></app-component>
+
+  <footer class="footer-title">&copy; Rapha and Germán</footer>
 </body>
+
 </html>
