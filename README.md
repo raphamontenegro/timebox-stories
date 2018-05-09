@@ -82,7 +82,7 @@ As a user, a distant future, I want to be able to buy e-books from Amazon so tha
 
 # MODELS
 
-Users {
+User {
   username: {
     type: string,
     required: true
@@ -98,21 +98,21 @@ Users {
   }
 }
 
-stories {
+Story {
 	length:  {
 		type: String,
 		required: true
 	},
-	read {
+	read: {
 		type: boolean
 	},
-	tags {
+	tags: {
 		type: String
 	},
-	owner {
+	owner: {
 		type: ObjectId,
     required: true
-    }
+  }
    /* source {
         type: String,
         required: true
