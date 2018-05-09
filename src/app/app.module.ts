@@ -10,6 +10,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { notFoundPageComponent } from './pages/not-found-page/not-found-page.component';
+import { AuthService } from './services/auth.service';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -28,11 +29,12 @@ const routes: Routes = [
     notFoundPageComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
