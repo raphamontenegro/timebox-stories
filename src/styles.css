@@ -18,14 +18,9 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 147%;
-}
-
-
-/* ---- Mierdas que cambiar ---- */
-
-body {
   background-color: #03A9F4;
 }
+
 
 /* ---- Animation-menu ---- */
 
@@ -59,81 +54,60 @@ body {
 
 /* ---- Burger-menu ---- */
 .nav {
+  border-bottom: 1px solid #EAEAEB;
   text-align: right;
-  line-height: 60px;
-  background-color: white;
-  color: #03A9F4;
+  height: 70px;
+  line-height: 70px;
+  background-color: #2286c3;
 }
-
 .menu {
   margin: 0 30px 0 0;
 }
-
 .menu a {
+  clear: right;
   text-decoration: none;
-  color: #03A9F4;
+  color: #fff ;
   margin: 0 10px;
-}
-
-span {
-  color: red;
-}
-
-label {
-  margin: 0 30px 0 0;
-  font-size: 26px;
   line-height: 50px;
-  width: 26px;
-  float: right;
-  display: none;
 }
 
+.label-burger {
+  margin: 0 40px 0 0;
+  font-size: 26px;
+  line-height: 70px;
+  display: none;
+  width: 16px;
+  float: right;
+  color: #03A9F4;
+}
 #toggle {
   display: none;
 }
 
+
 @media only screen and (max-width: 500px) {
-  label {
+  .label-burger {
     display: block;
     cursor: pointer;
   }
   .menu {
     text-align: center;
+    width: 100%;
     display: none;
-    background-color: #fff;
-    animation-name: checked;
-    animation-duration: 400ms;
-    margin: 50px 30px 0 0; 
-    border-radius: 6px;
   }
   .menu a {
-    clear: right;
     display: block;
+    border-bottom: 1px solid #EAEAEB;
     margin: 0;
-    color: #03A9F4;
     animation-name:checked-text;
-    animation-duration: 500ms;
+    animation-duration: 200ms;
+    color: #fff;
+    background-color: #2286c3
   }
   #toggle:checked + .menu {
-    display: block;
+      display: block;
   }
-  .nav {
-    float: right;
-    margin: 0; 
-    padding: 0;
-    width: 110px;
-    height: 110px;
-    background-color:  #03A9F4;
-    border-bottom-left-radius: 100%;
-    border: none;
-    color: #fff;
-  }
-  /* #burger:active {
-    animation-name: rotate;
-    animation-duration: 500ms;
-  } */
 }
-/* ---- Initial-text ---- */
 
 .initial-text {
   position: absolute;
@@ -162,7 +136,7 @@ label {
 }
 
 .button-title:hover {
-  background-color: #fff;
+  background-color: #2286c3;
   color:#03A9F4;
 }
 
@@ -174,7 +148,7 @@ label {
 /* ---- Footer-title ---- */
 
 .footer-title {
-  background-color: #fff;
+  background-color: #2286c3;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -183,4 +157,66 @@ label {
   text-align: right;
   padding: 6px;
 }
+/* ---- Form ---- */
 
+form.is-processing {
+  opacity: 0.5;
+}
+
+form .field {
+	margin-bottom: 20px;
+}
+
+form label {
+	display: block;
+	margin-bottom: 10px;
+  font-style: bold;
+}
+
+form input {
+  padding: 5px;
+  font-size: 16px;
+  background-color:#dfe4ea;
+}
+
+form .submit {
+  padding-top: 20px;
+}
+
+form .submit button {
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 16px;
+  background-color: #2286c3;
+  cursor: pointer;
+  color: black;
+}
+
+form .field.has-error label {
+	color: white;
+}
+
+form .validation {
+	margin: 5px 0 10px;
+	color: black;
+}
+
+form .field.has-error input {
+	border: 1px solid  black;
+}
+
+/* ---- Signup-form ---- */
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 30px;
+  text-align: center;
+  margin-top: 50px;
+  padding: 10px;
+  background-color: #fff;
+}
