@@ -78,7 +78,7 @@ body {
   display: none;
   width: 16px;
   float: right;
-  color: #03A9F4;
+  color: #fff;
 }
 #toggle {
   display: none;
@@ -126,7 +126,7 @@ body {
 .button-title {
   background: none;
   border: 3px solid #fff;
-  color: white;
+  color: #fff;
   border-radius: 6px;
   padding: 10px;
   font-weight: bold;
