@@ -53,6 +53,7 @@ As a user, a distant future, I want to be able to buy e-books from Amazon so tha
 - routerLink /auth/login
 - routerLink /auth/signup
 - routerLink /stories
+- routerLink - /stories?time=${length}
 - routerLink /stories/:id
 
 ### BACKLOG
@@ -92,7 +93,7 @@ As a user, a distant future, I want to be able to buy e-books from Amazon so tha
 - GET /auth/me -- returns current user in session (if any)
 
 - GET /stories -- returns a json with the the story list
-- GET /stories?time=${length}
+- GET /stories?time=${length} - returns a list of stories with the same length
 - GET /stories/:id -- returns a json with one story
 
 ### BACKLOG
