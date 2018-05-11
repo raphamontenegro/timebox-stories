@@ -92,6 +92,7 @@ As a user, a distant future, I want to be able to buy e-books from Amazon so tha
 - GET /auth/me -- returns current user in session (if any)
 
 - GET /stories -- returns a json with the the story list
+- GET /stories?time=${length}
 - GET /stories/:id -- returns a json with one story
 
 ### BACKLOG
