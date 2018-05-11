@@ -18,13 +18,13 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 147%;
-  background-color: #03A9F4;
+  background-color: #fff;
 }
 
 
 /* ---- Animation-menu ---- */
 
-@keyframes rotate {
+/* @keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
@@ -50,7 +50,7 @@ body {
   100% {
     height: 130%;
   }
-}
+} */
 
 /* ---- Burger-menu ---- */
 .nav {
@@ -58,7 +58,7 @@ body {
   text-align: right;
   height: 70px;
   line-height: 70px;
-  background-color: #2286c3;
+  background-color: #425B7A;
 }
 .menu {
   margin: 0 30px 0 0;
@@ -71,47 +71,12 @@ body {
   line-height: 50px;
 }
 
-.label-burger {
-  margin: 0 40px 0 0;
-  font-size: 26px;
-  line-height: 70px;
-  display: none;
-  width: 16px;
-  float: right;
-  color: #fff;
-}
-#toggle {
-  display: none;
-}
 
-
-@media only screen and (max-width: 500px) {
-  .label-burger {
-    display: block;
-    cursor: pointer;
-  }
-  .menu {
-    text-align: center;
-    width: 100%;
-    display: none;
-  }
-  .menu a {
-    display: block;
-    border-bottom: 1px solid #EAEAEB;
-    margin: 0;
-    animation-name:checked-text;
-    animation-duration: 200ms;
-    color: #fff;
-    background-color: #2286c3
-  }
-  #toggle:checked + .menu {
-      display: block;
-  }
-}
+/* ---- Initial-text ---- */
 
 .initial-text {
   position: absolute;
-  color:white;
+  color: #111;
   top: 35%;
   right: 50%;
   text-align: right;
@@ -148,12 +113,12 @@ body {
 /* ---- Footer-title ---- */
 
 .footer-title {
-  background-color: #2286c3;
+  background-color: #425B7A;
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 40px;
-  color: #535c68;
+  color: #fff;
   text-align: right;
   padding: 6px;
 }
@@ -219,4 +184,19 @@ form .field.has-error input {
   margin-top: 50px;
   padding: 10px;
   background-color: #fff;
+}
+
+/* ---- Time-form ---- */
+
+.time-form {
+  background-color: #dfe4ea;
+}
+.time-button {
+  margin-top: 15px; 
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 16px;
+  background-color: #2286c3;
+  cursor: pointer;
+  color: black;
 }
