@@ -37,7 +37,7 @@ const routes: Routes = [
     LoginPageComponent,
     SignupPageComponent,
     notFoundPageComponent,
-    StoriesPageComponent
+    StoriesPageComponent,
   ],
   imports: [
     FormsModule,
