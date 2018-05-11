@@ -16,5 +16,5 @@ export class StoriesService {
    return this.httpClient.get(`${this.baseUrl}/stories?time=${length}`, options)
      .toPromise();
  }
- }
+}
 
