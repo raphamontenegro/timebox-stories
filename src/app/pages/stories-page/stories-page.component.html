@@ -4,7 +4,7 @@
     <div class="field" [ngClass]="{'has-error': feedbackEnabled && timeField.errors}">
       <select name="time" [(ngModel)]="time" >
         <option value="...">...</option>
-        <option value="5">5 min</option>
+        <option value="5" selected="selected" >5 min</option>
         <option value="10">10 min</option>
         <option value="15">15min</option>
         <option value="20">20 min</option>
@@ -20,5 +20,5 @@
       </select>
     </div>
     </form>
-  <button [routerLink]="['/stories', time]" class="time-button">GO!</button>
+  <button *ngIf="time >=5"[routerLink]="['/stories', time]" class="time-button">GO!</button>
 </div>
