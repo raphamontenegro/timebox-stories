@@ -52,8 +52,8 @@ As a user, a distant future, I want to be able to buy e-books from Amazon so tha
 - / - The homepage
 - routerLink /auth/login
 - routerLink /auth/signup
-- routerLink /storypicker
-- routerLink /storypicker/:id
+- routerLink /stories
+- routerLink /stories/:id
 
 ### BACKLOG
 
