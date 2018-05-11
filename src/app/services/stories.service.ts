@@ -9,12 +9,12 @@ export class StoriesService {
 
   constructor(private httpClient: HttpClient) { }
 
- findOneByLength(length) {
+  getAllByLength(length): Promise<any> {
    const options = {
      withCredentials: true
    };
    return this.httpClient.get(`${this.baseUrl}/stories?time=${length}`, options)
      .toPromise();
  }
- }
+}
 

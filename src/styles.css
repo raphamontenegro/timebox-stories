@@ -97,11 +97,12 @@ body {
   font-weight: bold;
   margin: 5px;
   overflow: hidden;
-  font-size: 12px
+  font-size: 12px;
+  background-color: black;
 }
 
 .button-title:hover {
-  background-color: #2286c3;
+  background-color: #111;
   color:#03A9F4;
 }
 
