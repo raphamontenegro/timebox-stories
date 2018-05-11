@@ -1,8 +1,8 @@
 <div class="signup-form">
   <h1>Choose time</h1>
-
-    <div class="field">
-      <select name="time" [(ngModel)]="time">
+    <form class="forms" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
+    <div class="field" [ngClass]="{'has-error': feedbackEnabled && timeField.errors}">
+      <select name="time" [(ngModel)]="time" >
         <option value="...">...</option>
         <option value="5">5 min</option>
         <option value="10">10 min</option>
@@ -13,7 +13,12 @@
         <option value="35">35 min</option>
         <option value="40">40 min</option>
         <option value="45">45 min</option>
+
+        <div *ngIf="feedbackEnabled && timeField.errors">
+          <p *ngIf="timeField.errors.required" class="validation">Time is required</p>
+        </div>
       </select>
     </div>
+    </form>
   <button [routerLink]="['/stories', time]" class="time-button">GO!</button>
 </div>

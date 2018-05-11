@@ -13,13 +13,6 @@
       </div>
     </div>
 
-    <div class="field" [ngClass]="{'has-error': feedbackEnabled && emailField.errors}">
-      <input type="text" name="email" [(ngModel)]="email" #emailField="ngModel" required [disabled]="processing" placeholder="Email*" />
-      <div *ngIf="feedbackEnabled && emailField.errors">
-        <p *ngIf="emailField.errors.required" class="validation">Email required</p>
-      </div>
-    </div>
-
     <div class="field" [ngClass]="{'has-error': feedbackEnabled && passwordField.errors}">
       <input type="password" name="password" [(ngModel)]="password" #passwordField="ngModel" required minlength="6" [disabled]="processing" placeholder="Password*"
       />
