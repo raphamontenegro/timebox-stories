@@ -43,4 +43,13 @@ export class LoginPageComponent implements OnInit {
     }
   }
 
+  callPocket() {
+    this.authService.pocketLogin()
+      .then((result) => {
+        this.router.navigate(['/']);
+      });
+      // .catch((err) => {
+
+      // });
+  }
 }

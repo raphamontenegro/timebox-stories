@@ -54,6 +54,15 @@ export class AuthService {
       .then((data) => this.setUser(data));
   }
 
+  pocketLogin(): Promise<any> {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.get(`${this.API_URL}/pocket`, options)
+      .toPromise()
+      .then((data) => this.setUser(data));
+  }
+
   logout(): Promise<any> {
     const options = {
       withCredentials: true
