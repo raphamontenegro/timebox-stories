@@ -60,7 +60,7 @@ export class AuthService {
     };
     return this.httpClient.get(`${this.API_URL}/pocket`, options)
       .toPromise()
-      .then((data) => this.setUser(data));
+      .then((data:any) => window.location.href = data.url);
   }
 
   logout(): Promise<any> {

@@ -43,13 +43,13 @@ export class LoginPageComponent implements OnInit {
     }
   }
 
-  callPocket() {
+  callPocket() { 
+    this.error = '';
+    this.processing = true;
     this.authService.pocketLogin()
-      .then((result) => {
-        this.router.navigate(['/']);
+      .catch((err) => {
+        this.error = err.error.code;
+        this.processing = false;
       });
-      // .catch((err) => {
-
-      // });
   }
 }
