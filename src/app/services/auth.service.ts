@@ -58,9 +58,12 @@ export class AuthService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.get(`${this.API_URL}/pocket`, options)
+    return this.httpClient
+      .get(`${this.API_URL}/pocket`, options)
       .toPromise()
-      .then((data:any) => window.location.href = data.url);
+      .then((data: any) => {
+        window.location.href = data.url;
+      });
   }
 
   logout(): Promise<any> {
