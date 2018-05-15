@@ -43,7 +43,7 @@ export class LoginPageComponent implements OnInit {
     }
   }
 
-  callPocket() { 
+  callPocket() {
     this.error = '';
     this.processing = true;
     this.authService.pocketLogin()
