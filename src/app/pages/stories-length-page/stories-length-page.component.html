@@ -11,6 +11,7 @@
     <div>
       <h3>{{story.title}}</h3>
       <p>{{story.text}}</p>
+      <a [routerLink]="['/stories', story._id, 'read']">Read</a>
     </div>
 </section>
 

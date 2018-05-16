@@ -147,7 +147,6 @@ form .submit {
   padding: 0 0 10px 10px;
 }
 
-
 .user {
   padding: 10px;
 }
@@ -174,7 +173,7 @@ form .submit {
 /* ---- icon-footer ---- */
 
 .icon-footer {
-  position: fixed;
+  position: relative;
   display: flex;
   align-content: center;
   justify-content: center;

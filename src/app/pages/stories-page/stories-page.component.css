@@ -1,0 +1,210 @@
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 12.5px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #cecece;
+  border: 0px solid #000;
+  border-radius: 0px;
+}
+input[type=range]::-webkit-slider-thumb {
+  position: relative;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  background: #01c9ca;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-appearance: none;
+  margin-top: -10px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #cecece;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #cecece;
+  border: 0px solid #000;
+  border-radius: 0px;
+}
+input[type=range]::-moz-range-thumb {
+  position: relative;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  background: #01c9ca;
+  cursor: pointer;
+  z-index: 1;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+  border-color: transparent;
+  border-width: 25px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #cecece;
+  border: 0px solid #000;
+  border-radius: 0px;
+}
+input[type=range]::-ms-fill-upper {
+  background: #cecece;
+  border: 0px solid #000;
+  border-radius: 0px;
+}
+input[type=range]::-ms-thumb {
+  position: relative;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+  background: #01c9ca;
+  cursor: pointer;
+  z-index: 1;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #cecece;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #cecece;
+}
+
+/* Custom by @mmt-zinee */
+.range {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0 50px;
+  width: 100%;
+}
+.range[data-value='0'] .label {
+  left: 0%;
+}
+.range[data-value='1'] .label {
+  left: 1%;
+}
+.range[data-value='2'] .label {
+  left: 2%;
+}
+.range[data-value='3'] .label {
+  left: 3%;
+}
+.range[data-value='4'] .label {
+  left: 4%;
+}
+.range[data-value='5'] .label {
+  left: 5%;
+}
+.range[data-value='6'] .label {
+  left: 6%;
+}
+.range[data-value='7'] .label {
+  left: 7%;
+}
+.range[data-value='8'] .label {
+  left: 8%;
+}
+
+
+.label {
+  position: relative;
+  top: 0;
+  margin-left: -40px;
+  margin-bottom: 20px;
+  width: 80px;
+}
+.label .value {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  z-index: 1;
+}
+.label .drop {
+  box-sizing: content-box;
+  width: 80px;
+  height: 80px;
+  border-radius: 80% 0 55% 50%/55% 0 80% 50%;
+  background: #01c9ca;
+  -webkit-transform: rotateZ(135deg);
+  transform: rotateZ(135deg);
+}
+
+.input-box {
+  position: relative;
+  margin: 0 -12.5px;
+  height: 60px;
+}
+.input-box input[type="range"] {
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 60px;
+}
+.input-box .bar {
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  margin: 0 0 -2.5px;
+  height: 5px;
+  background: #01c9ca;
+  z-index: 0;
+}
+.input-box[data-value='0'] .bar {
+  margin-right: 25px;
+  width: calc(0% - 25px / (100/0));
+}
+.input-box[data-value='1'] .bar {
+  margin-right: 25px;
+  width: calc(1% - 25px / (100/1));
+}
+.input-box[data-value='2'] .bar {
+  margin-right: 25px;
+  width: calc(2% - 25px / (100/2));
+}
+.input-box[data-value='3'] .bar {
+  margin-right: 25px;
+  width: calc(3% - 25px / (100/3));
+}
+.input-box[data-value='4'] .bar {
+  margin-right: 25px;
+  width: calc(4% - 25px / (100/4));
+}
+.input-box[data-value='5'] .bar {
+  margin-right: 25px;
+  width: calc(5% - 25px / (100/5));
+}
+.input-box[data-value='6'] .bar {
+  margin-right: 25px;
+  width: calc(6% - 25px / (100/6));
+}
+.input-box[data-value='7'] .bar {
+  margin-right: 25px;
+  width: calc(7% - 25px / (100/7));
+}
+.input-box[data-value='8'] .bar {
+  margin-right: 25px;
+  width: calc(8% - 25px / (100/8));
+}

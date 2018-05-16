@@ -3,18 +3,13 @@
     <div class="container">
         <div class="user" *ngIf="!loading && !!user">
             <a href="#">{{user.username}}</a>
-            <a (click)="logout()"><img src="../assets/images/noun_1015823_cc.svg" width="34px"></a>
+            <a (click)="logout()"><img src="../assets/images/logout.svg" width="34px"></a>
         </div>
         <div class="nav" *ngIf="!loading && anon">
 
-            <div class="menu">
-                <!-- <a [routerLink]="['/login']">Log in</a>
-                <a [routerLink]="['/signup']">Sign Up</a> -->
-            </div>
         </div>
     </div>
 </header>
 
 <router-outlet></router-outlet>
 
-<!-- <footer class="footer-title">&copy; Rapha and Germán</footer> -->

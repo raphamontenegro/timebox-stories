@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./stories-length-page.component.css']
 })
 export class StoriesLengthPageComponent implements OnInit {
-  stories: any;
+  stories: Array<any> = [];
   storiesLength: number;
 
   constructor(private storiesService: StoriesService, private activatedRoute: ActivatedRoute, private router: Router) {}

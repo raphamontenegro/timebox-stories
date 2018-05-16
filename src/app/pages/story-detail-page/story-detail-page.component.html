@@ -1,0 +1,7 @@
+<ng-container *ngIf="!story">
+  <p>DAFUQ?!</p>
+</ng-container>
+
+<ng-container *ngIf="story">
+  --{{story || json}} --
+</ng-container>

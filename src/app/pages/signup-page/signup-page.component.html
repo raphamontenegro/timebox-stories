@@ -2,7 +2,7 @@
 <section class="signup-form">
   <div class="signup-form">
     <form class="form" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
-    <h2>Signup or <a href="">log in</a></h2>
+    <h2>Signup or <a [routerLink]="['/login']">log in</a></h2>
 
       <div class="field" [ngClass]="{'has-error': feedbackEnabled && usernameField.errors}">
         <label>username*</label>

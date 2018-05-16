@@ -16,5 +16,13 @@ export class StoriesService {
    return this.httpClient.get(`${this.baseUrl}/stories?time=${length}`, options)
      .toPromise();
  }
+
+  getOneById(id: string) {
+    const options = {
+      withCredentials: true
+    };
+    return this.httpClient.get(`${this.baseUrl}/stories/${id}/read`, options)
+      .toPromise();
+  }
 }
 
