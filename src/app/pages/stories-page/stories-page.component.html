@@ -6,7 +6,7 @@
         <div class="drop"></div>
      
     <div class="field" [ngClass]="{'has-error': feedbackEnabled && timeField.errors}">
-      <input type="range" list="time" min="5" max="45" value="0" step="5" [(ngModel)]="time" name="time">
+      <input type="range" list="time" min="5" max="45" value="0" step="5" [(ngModel)]="time" #timeField="ngModel" name="time">
         <div class="bar"></div>
 
         <div *ngIf="feedbackEnabled && timeField.errors">
