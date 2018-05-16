@@ -21,7 +21,7 @@ input[type=range]::-webkit-slider-thumb {
   height: 25px;
   width: 25px;
   border-radius: 100%;
-  background: #01c9ca;
+  background: #fff;
   cursor: pointer;
   z-index: 1;
   -webkit-appearance: none;
@@ -45,7 +45,7 @@ input[type=range]::-moz-range-thumb {
   height: 25px;
   width: 25px;
   border-radius: 100%;
-  background: #01c9ca;
+  background: #fff;
   cursor: pointer;
   z-index: 1;
 }
@@ -75,7 +75,7 @@ input[type=range]::-ms-thumb {
   height: 25px;
   width: 25px;
   border-radius: 100%;
-  background: #01c9ca;
+  background: #fff;
   cursor: pointer;
   z-index: 1;
 }
@@ -92,33 +92,6 @@ input[type=range]:focus::-ms-fill-upper {
   position: relative;
   padding: 0 50px;
   width: 100%;
-}
-.range[data-value='0'] .label {
-  left: 0%;
-}
-.range[data-value='1'] .label {
-  left: 1%;
-}
-.range[data-value='2'] .label {
-  left: 2%;
-}
-.range[data-value='3'] .label {
-  left: 3%;
-}
-.range[data-value='4'] .label {
-  left: 4%;
-}
-.range[data-value='5'] .label {
-  left: 5%;
-}
-.range[data-value='6'] .label {
-  left: 6%;
-}
-.range[data-value='7'] .label {
-  left: 7%;
-}
-.range[data-value='8'] .label {
-  left: 8%;
 }
 
 
@@ -146,7 +119,7 @@ input[type=range]:focus::-ms-fill-upper {
   width: 80px;
   height: 80px;
   border-radius: 80% 0 55% 50%/55% 0 80% 50%;
-  background: #01c9ca;
+  background: #ffff;
   -webkit-transform: rotateZ(135deg);
   transform: rotateZ(135deg);
 }
@@ -169,42 +142,15 @@ input[type=range]:focus::-ms-fill-upper {
   left: 0;
   margin: 0 0 -2.5px;
   height: 5px;
-  background: #01c9ca;
+  background: #fff;
   z-index: 0;
 }
-.input-box[data-value='0'] .bar {
-  margin-right: 25px;
-  width: calc(0% - 25px / (100/0));
-}
-.input-box[data-value='1'] .bar {
-  margin-right: 25px;
-  width: calc(1% - 25px / (100/1));
-}
-.input-box[data-value='2'] .bar {
-  margin-right: 25px;
-  width: calc(2% - 25px / (100/2));
-}
-.input-box[data-value='3'] .bar {
-  margin-right: 25px;
-  width: calc(3% - 25px / (100/3));
-}
-.input-box[data-value='4'] .bar {
-  margin-right: 25px;
-  width: calc(4% - 25px / (100/4));
-}
-.input-box[data-value='5'] .bar {
-  margin-right: 25px;
-  width: calc(5% - 25px / (100/5));
-}
-.input-box[data-value='6'] .bar {
-  margin-right: 25px;
-  width: calc(6% - 25px / (100/6));
-}
-.input-box[data-value='7'] .bar {
-  margin-right: 25px;
-  width: calc(7% - 25px / (100/7));
-}
-.input-box[data-value='8'] .bar {
-  margin-right: 25px;
-  width: calc(8% - 25px / (100/8));
-}
+
+
+
+
+
+
+
+
+
