@@ -96,3 +96,44 @@ form .submit {
   padding-top: 10px;
   text-align: center;
 }
+
+
+/* ---- main-title ---- */
+
+.main-title {
+  text-align: right;
+  margin-right: 10%;
+  margin-top: 80%;
+}
+
+/* ---- main-buttons ---- */
+
+.main-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 15%;
+}
+
+
+@media only screen and (min-width: 450px) {
+  .main-title {
+    text-align: center;
+    margin-right: 0%;
+    font-size: 30px;
+  }
+
+  .main-page {
+    margin-top: 300px;
+  }
+
+  .button {
+    font-size: 30px;
+    width: 200px;
+  }
+
+  .false-footer {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+}
