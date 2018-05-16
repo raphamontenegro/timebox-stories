@@ -1,8 +1,20 @@
-<h1>Pick one</h1>
 
-<div class="card-story">
-  <div *ngFor="let story of stories">
-    <h3>{{story.title}}</h3>
-    <p>{{story.text}}</p>
+<img src="cruz.svg" alt="" width="30px" class="X-logout">
+
+<section class="false-nav">
+  <div>
+    <h2>Your stories, pick one:</h2>
   </div>
+</section>
+
+<section class="cards" *ngFor="let story of stories">
+    <div>
+      <h3>{{story.title}}</h3>
+      <p>{{story.text}}</p>
+    </div>
+</section>
+
+<div class="icon-footer">
+  <img src="./assets/images/profile.svg" width="50px" height="50px">
+  <a [routerLink]="['/stories']"><img src="./assets/images/time.svg" alt="" width="50px" height="50px"></a>
 </div>

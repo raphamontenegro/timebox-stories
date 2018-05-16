@@ -5,7 +5,7 @@ body {
   font-size: 20px;
   line-height: 147%;
   background-color: #5695E2;
-  color: #fff;
+  color: #ffff;
 }
 
 /* ---- button ---- */
@@ -137,3 +137,51 @@ form .submit {
   }
 
 }
+
+
+/* ---- false-nav ---- */
+
+.false-nav {
+  background-color: #5695E2;
+  color: #fff;
+  padding: 0 0 10px 10px;
+}
+
+
+.user {
+  padding: 10px;
+}
+
+.user img {
+  float: right;
+  margin-top: -5px;
+}
+
+/* ---- cards ---- */
+
+.cards {
+  margin: 10px;
+  padding: 5px;
+  box-shadow: 0 0 16px 1px rgb(105, 105, 105);
+  background-color: #ffff;
+  color:#111
+}
+
+.cards h3{
+  color: #5695E2;
+}
+
+/* ---- icon-footer ---- */
+
+.icon-footer {
+  position: fixed;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+}
+
+

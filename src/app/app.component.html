@@ -3,7 +3,7 @@
     <div class="container">
         <div class="user" *ngIf="!loading && !!user">
             <a href="#">{{user.username}}</a>
-            <button (click)="logout()">Logout</button>
+            <a (click)="logout()"><img src="../assets/images/noun_1015823_cc.svg" width="34px"></a>
         </div>
         <div class="nav" *ngIf="!loading && anon">
 
