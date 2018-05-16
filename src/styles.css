@@ -173,14 +173,23 @@ form .submit {
 /* ---- icon-footer ---- */
 
 .icon-footer {
-  position: relative;
+  position: fixed;
   display: flex;
   align-content: center;
   justify-content: center;
   justify-content: space-evenly;
   bottom: 0;
-  width: 100%;
+  left: 0;
+  right: 0;
   background-color: white;
 }
 
+/* ---- button-time ---- */
 
+.button-time {
+  text-align: center;
+}
+
+.stories-title h3{
+  text-align: center;
+}

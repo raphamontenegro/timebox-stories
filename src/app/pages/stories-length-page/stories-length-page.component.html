@@ -9,9 +9,9 @@
 
 <section class="cards" *ngFor="let story of stories">
     <div>
-      <h3>{{story.title}}</h3>
+      <h3>{{story.title}}</h3> <a [routerLink]="['/stories', story._id, 'read']">Read</a>
       <p>{{story.text}}</p>
-      <a [routerLink]="['/stories', story._id, 'read']">Read</a>
+      
     </div>
 </section>
 
