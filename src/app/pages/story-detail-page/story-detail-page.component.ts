@@ -16,15 +16,15 @@ export class StoryDetailPageComponent implements OnInit {
   constructor(private storieService: StoriesService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    
+
     this.activatedRoute.params
     .subscribe((params) => {
-      this.idStory = params.id
+      this.idStory = params.id;
       this.storieService.getOneById(this.idStory)
-      .then(data => this.story = data)
-    })
+      .then(data => this.story = data);
+    });
 
   }
-           
+
 
 }

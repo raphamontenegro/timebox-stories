@@ -3,5 +3,6 @@
 </ng-container>
 
 <ng-container *ngIf="story">
-  --{{story || json}} --
+  <h2>{{story.title}}</h2>
+  <p>{{story.text}}</p>
 </ng-container>
