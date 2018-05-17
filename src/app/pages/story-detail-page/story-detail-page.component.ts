@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { StoriesService } from '../../services/stories.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 
 @Component({
@@ -13,15 +13,15 @@ export class StoryDetailPageComponent implements OnInit {
   story: any;
   idStory: string;
 
-  constructor(private storieService: StoriesService, private activatedRoute: ActivatedRoute) { }
+  constructor(private authService: AuthService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
 
     this.activatedRoute.params
     .subscribe((params) => {
       this.idStory = params.id;
-      this.storieService.getOneById(this.idStory)
-      .then(data => this.story = data);
+      this.story = this.authService.getOneStoryById(this.idStory);
+      console.log(this.story);
     });
 
   }

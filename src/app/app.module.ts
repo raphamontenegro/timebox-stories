@@ -23,14 +23,15 @@ import { InitAuthGuardService } from './guards/init-auth-guard.service';
 import { RequireAnonGuardService } from './guards/require-anon-guard.service';
 import { RequireUserGuardService } from './guards/require-user-guard.service';
 import { StoriesLengthPageComponent } from './pages/stories-length-page/stories-length-page.component';
+import { TruncatePipe } from './pipes/truncate.pipe';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent, canActivate:  [InitAuthGuardService, RequireAnonGuardService] },
   { path: 'login', component: LoginPageComponent, canActivate: [InitAuthGuardService, RequireAnonGuardService] },
   { path: 'signup', component: SignupPageComponent, canActivate: [InitAuthGuardService, RequireAnonGuardService] },
   { path: 'stories', component: StoriesPageComponent, canActivate: [RequireUserGuardService] },
-  { path: 'stories/:time', component: StoriesLengthPageComponent, canActivate: [RequireUserGuardService] },
   { path: 'stories/:id/read', component: StoryDetailPageComponent , canActivate: [RequireUserGuardService] },
+  { path: 'stories/:time', component: StoriesLengthPageComponent, canActivate: [RequireUserGuardService] },
   { path: 'no-stories', component: NoStoriesComponent , canActivate: [RequireUserGuardService] },
   { path: '**', component: notFoundPageComponent }
 ];
@@ -46,7 +47,8 @@ const routes: Routes = [
     StoriesPageComponent,
     StoriesLengthPageComponent,
     StoryDetailPageComponent,
-    NoStoriesComponent
+    NoStoriesComponent,
+    TruncatePipe
   ],
   imports: [
     FormsModule,

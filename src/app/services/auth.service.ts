@@ -12,8 +12,9 @@ export class AuthService {
   private user: any;
   private userChange: Subject<any> = new Subject();
 
-  private API_URL = environment.API_URL + '/auth';
+  private API_URL = environment.API_URL;
 
+  private pocketArticles: any = [];
 
   userChange$: Observable<any> = this.userChange.asObservable();
 
@@ -29,7 +30,7 @@ export class AuthService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.get(`${this.API_URL}/me`, options)
+    return this.httpClient.get(`${this.API_URL}/auth/me`, options)
       .toPromise()
       .then((user) => this.setUser(user))
       .catch((err) => {
@@ -43,7 +44,7 @@ export class AuthService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.post(`${this.API_URL}/signup`, user, options)
+    return this.httpClient.post(`${this.API_URL}/auth/signup`, user, options)
       .toPromise()
       .then((data) => this.setUser(data));
   }
@@ -52,7 +53,7 @@ export class AuthService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.post(`${this.API_URL}/login`, user, options)
+    return this.httpClient.post(`${this.API_URL}/auth/login`, user, options)
       .toPromise()
       .then((data) => this.setUser(data));
   }
@@ -62,7 +63,7 @@ export class AuthService {
       withCredentials: true
     };
     return this.httpClient
-      .get(`${this.API_URL}/pocket`, options)
+      .get(`${this.API_URL}/auth/pocket`, options)
       .toPromise()
       .then((data: any) => {
         window.location.href = data.url;
@@ -73,7 +74,7 @@ export class AuthService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.post(`${this.API_URL}/logout`, {}, options)
+    return this.httpClient.post(`${this.API_URL}/auth/logout`, {}, options)
       .toPromise()
       .then(() => this.setUser());
   }
@@ -82,8 +83,16 @@ export class AuthService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.get(`http://localhost:3000/stories/pocket/${time}`, options)
-    .toPromise();
+    return this.httpClient.get(`${this.API_URL}/stories/pocket/${time}`, options)
+    .toPromise()
+    .then((result) => {
+      this.pocketArticles =  result;
+      return result;
+    });
+  }
+
+  getOneStoryById(id: string) {
+    return this.pocketArticles[id];
   }
 
   }
