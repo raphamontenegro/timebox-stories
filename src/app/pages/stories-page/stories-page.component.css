@@ -146,6 +146,13 @@ input[type=range]:focus::-ms-fill-upper {
   z-index: 0;
 }
 
+.stories-title p{
+  text-align: center;
+}
+
+.field {
+  margin: 12px;
+}
 
 
 

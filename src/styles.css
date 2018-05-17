@@ -1,3 +1,17 @@
+/* ---- reset ---- */
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   color: #111;
   font-family: Helvetica, Arial, sans-serif;
@@ -27,6 +41,22 @@ body {
  top: 6px;
 }
 
+.button-pocket {
+  background-color: #ffff;
+  color: #5695E2;
+  font-size: 24px;
+  padding: 6px;
+  font-weight: 600;
+  z-index: 2;
+  box-shadow:0 0 #fff, 6px 5px  rgb(230, 229, 229);
+  width: 300px;
+}
+
+.button-pocket:hover {
+ box-shadow:0 0 #fff, 0px 0px  rgb(230, 229, 229);
+ position:relative;
+ top: 6px;
+}
 
 /* ---- login-form ---- */
 
@@ -103,7 +133,7 @@ form .submit {
 .main-title {
   text-align: right;
   margin-right: 10%;
-  margin-top: 80%;
+  margin-top: 70%;
 }
 
 /* ---- main-buttons ---- */
@@ -112,6 +142,13 @@ form .submit {
   display: flex;
   justify-content: space-evenly;
   padding-top: 15%;
+}
+
+.pocket-button {
+  display: flex;
+  padding-top: 40px;
+  align-content: center;
+  justify-content: center;
 }
 
 
@@ -193,3 +230,33 @@ form .submit {
 .stories-title h3{
   text-align: center;
 }
+
+.stories-title {
+  padding-top: 130px;
+}
+
+/* ---- no-stories ---- */
+
+.no-stories {
+  height: 665px;
+  width: 100%;
+  background-color: #fff;
+  /* border-radius: 6px; */
+}
+
+.no-stories h2{
+  text-align: center;
+  color: #5695E2;
+  padding-top: 50px;
+}
+
+.button-no-stories{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.no-stories img {
+  margin: 30px;
+}
+

@@ -1,8 +1,13 @@
 <ng-container *ngIf="!story">
-  <p>DAFUQ?!</p>
+  <div class="no-stories">
+    <!-- redirect -->
+  </div>
+
 </ng-container>
 
-<ng-container *ngIf="story">
-  <h2>{{story.title}}</h2>
-  <p>{{story.text}}</p>
-</ng-container>
+<div class="story-detail">
+  <ng-container *ngIf="story" class="story-detail">
+    <h2>{{story.title}}</h2>
+    <p>{{story.text}}</p>
+  </ng-container>
+</div>

@@ -30,7 +30,11 @@
         <button class="button" type="submit" [disabled]="processing">Login</button>
       </div>
 
-      <button class="button" (click)="callPocket()">Pocket test</button>
+      <div class="pocket-button">
+        <button class="button-pocket" (click)="callPocket()">Sign in with Pocket</button>
+      </div>
+
+      
     </form>
     <!-- switch {{error}} case "incorrect" - print "your username password are incorrect" default - print "somthing wnet wrong, please
     tryu again" -->

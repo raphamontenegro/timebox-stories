@@ -1,0 +1,14 @@
+.story-detail {
+  background-color: white;
+  color: black;
+  margin: 6px;
+  height: 100%;
+}
+
+.story-detail h2 {
+  padding-top: 10px;
+}
+
+.story-detail p {
+  margin: 3px;
+}

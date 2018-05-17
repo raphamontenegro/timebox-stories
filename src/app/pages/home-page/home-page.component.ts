@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 
 @Component({
@@ -8,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  feedbackEnabled = false;
+  error = null;
+  processing = false;
+  username: String;
+  email: String;
+  password: String;
+
+  constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
+  }
+
+  callPocket() {
+    this.error = '';
+    this.processing = true;
+    this.authService.pocketLogin()
+      .catch((err) => {
+        this.error = err.error.code;
+        this.processing = false;
+      });
   }
 
 }

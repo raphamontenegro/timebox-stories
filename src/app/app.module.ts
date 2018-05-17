@@ -12,6 +12,7 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { notFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { StoriesPageComponent } from './pages/stories-page/stories-page.component';
 import { StoryDetailPageComponent } from './pages/story-detail-page/story-detail-page.component';
+import { NoStoriesComponent } from './pages/no-stories/no-stories.component';
 
 // Services
 import { AuthService } from './services/auth.service';
@@ -30,6 +31,7 @@ const routes: Routes = [
   { path: 'stories', component: StoriesPageComponent, canActivate: [RequireUserGuardService] },
   { path: 'stories/:time', component: StoriesLengthPageComponent, canActivate: [RequireUserGuardService] },
   { path: 'stories/:id/read', component: StoryDetailPageComponent , canActivate: [RequireUserGuardService] },
+  { path: 'no-stories', component: NoStoriesComponent , canActivate: [RequireUserGuardService] },
   { path: '**', component: notFoundPageComponent }
 ];
 
@@ -43,7 +45,8 @@ const routes: Routes = [
     notFoundPageComponent,
     StoriesPageComponent,
     StoriesLengthPageComponent,
-    StoryDetailPageComponent
+    StoryDetailPageComponent,
+    NoStoriesComponent
   ],
   imports: [
     FormsModule,
