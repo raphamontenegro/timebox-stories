@@ -10,5 +10,6 @@
 }
 
 .story-detail p {
-  margin: 3px;
+  margin: 6px;
+  text-align: justify;
 }
