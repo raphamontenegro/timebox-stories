@@ -24,8 +24,7 @@ export class StoriesLengthPageComponent implements OnInit {
 
   private getPocketStories(length): any {
 
-    this.authService.pocketStories()
-      .then(result => console.log(result))
+    this.authService.pocketStories(this.storiesLength)
       .then(result => {
         if (!result) {
           this.router.navigate(['/']);

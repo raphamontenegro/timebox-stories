@@ -78,11 +78,11 @@ export class AuthService {
       .then(() => this.setUser());
   }
 
-  pocketStories(): Promise<any> {
+  pocketStories(time): Promise<any> {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.get('http://localhost:3000/stories/pocket', options)
+    return this.httpClient.get(`http://localhost:3000/stories/pocket/${time}`, options)
     .toPromise();
   }
 
