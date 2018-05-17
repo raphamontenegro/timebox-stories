@@ -221,6 +221,10 @@ form .submit {
   background-color: white;
 }
 
+.icon-footer img {
+  margin-top: 6px;
+}
+
 /* ---- button-time ---- */
 
 .button-time {
