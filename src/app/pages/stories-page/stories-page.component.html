@@ -1,16 +1,19 @@
 <div class="stories-title">
   <h3>Profit from your waiting hours <br> How much time do you have?</h3>
   <br>
-    <form class="forms" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
+
+  <form class="forms" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
       
         <div class="value"></div>
         <div class="drop"></div>
      
     <div class="field" [ngClass]="{'has-error': feedbackEnabled && timeField.errors}">
-      <input type="range" list="time" min="5" max="45" value="0" step="5" [(ngModel)]="time" #timeField="ngModel" name="time">
+      <input type="range" list="time" min="0" max="45" value="0" step="5" [(ngModel)]="time" #timeField="ngModel" name="time">
         <div class="bar"></div>
 
-        <p>{{timeField.value}} minutes read</p>
+        <div *ngIf="!timeField.value"> <p>Choose a reading time</p></div>
+        <div *ngIf="timeField.value"><p>{{timeField.value}} minutes read</p></div>
+        
 
         <div *ngIf="feedbackEnabled && timeField.errors">
           <p *ngIf="timeField.errors.required" class="validation">Time is required</p>
@@ -19,10 +22,10 @@
     </form>
     <br><br><br>
   <div class="button-time">
-    <button *ngIf="time >=0"[routerLink]="['/stories', time]" class="button">GO!</button>
+    <button *ngIf="timeField.value"[routerLink]="['/stories', time]" class="button">GO!</button>
   </div>
 </div>
-
+<button (click)="getPocketStories()">Test pocket stories</button>
 <div class="icon-footer">
   <img src="./assets/images/profile.svg" width="50px" height="50px">
   <a [routerLink]="['/stories']"><img src="./assets/images/time.svg" alt="" width="50px" height="50px"></a>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { StoriesService } from '../../services/stories.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
+
 
 @Component({
   selector: 'app-stories-length-page',
@@ -8,21 +10,39 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./stories-length-page.component.css']
 })
 export class StoriesLengthPageComponent implements OnInit {
-  stories: Array<any> = [];
+  stories: any = [];
   storiesLength: number;
+  error = null;
+  processing = false;
 
-  constructor(private storiesService: StoriesService, private activatedRoute: ActivatedRoute, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private storiesService: StoriesService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router
+  ) {}
+
+  private getPocketStories(length): any {
+
+    this.authService.pocketStories()
+      .then(result => console.log(result))
+      .then(result => {
+        if (!result) {
+          this.router.navigate(['/']);
+        }
+        this.stories = result;
+      })
+      . catch((err) => {
+        this.error = err.error.code;
+        this.processing = false;
+      });
+  }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
       this.storiesLength = params.time;
-      this.storiesService.getAllByLength(this.storiesLength)
-      .then(data => {
-        if (!data.length) {
-          this.router.navigate(['/']);
-        }
-        this.stories = data;
-      });
+      this.getPocketStories(this.storiesLength);
     });
   }
+
 }

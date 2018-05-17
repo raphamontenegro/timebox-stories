@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class StoriesPageComponent implements OnInit {
 
-  time = 5;
+  time = 0;
   feedbackEnabled = false;
   error = null;
   processing = false;
@@ -26,4 +26,5 @@ export class StoriesPageComponent implements OnInit {
       this.router.navigate([`/stories/${this.time}`]);
     }
   }
+
 }
