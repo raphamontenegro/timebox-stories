@@ -1,33 +1,3 @@
-# titulo 1
-## titulo 2
-### 
-
-esto es un __parrafo__ tambien podemos `codigo` 
-
-```javascript
-var name = 'ironhack';
-function algo () {
-  
-}
-```
-
-| header 1 | header 2 |
-|--|--|
-| algo | algo |
-
-
-(link)[https://google.es]
-
-
-
-
-
-
-
-
-
-
-
 # MVP
 
 As a user I want to sign up so that I open an account.
